@@ -1,4 +1,4 @@
-import { CHARACTERS_SUCCESS } from './../actions/index';
+import { CHARACTERS_SUCCESS, /*GET_CHARACTER_INFO*/ } from './../actions/index';
 
 const initialState = {
     characters: []
@@ -11,6 +11,11 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 characters: action.payload
             }
+        // case GET_CHARACTER_INFO:
+        //     return {
+        //         ...state,
+        //         characters: state.characters
+        //     }
         default: 
             return state;
     }
