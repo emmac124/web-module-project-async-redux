@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         border: '4px solid #e89ac7',
         backgroundImage: "linear-gradient(#e89ac7, #97ce4c)",
         padding: '2%',
-        height: '65vh',
+        height: '68vh',
     },
     img: {
         margin: '0 auto',
