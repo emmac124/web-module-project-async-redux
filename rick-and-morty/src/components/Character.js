@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         flexDirection: 'column',
         margin: '1%',
         border: '4px solid #e89ac7',
-        backgroundColor: '#97ce4c',
+        backgroundImage: "linear-gradient(#e89ac7, #97ce4c)",
         padding: '2%',
         height: '65vh',
     },
@@ -36,6 +36,11 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         padding: '2%'
+    },
+    summary: {
+        fontWeight: 'bolder',
+        fontFamily: "'Ranchers', cursive",
+        textShadow: "1px 1px 5px #e89ac7",
     }
 })
 
@@ -54,18 +59,21 @@ const Character = (props) => {
                     </Grid>
                     <Grid className={classes.groupedText}>
                         <Typography variant='h5' className={classes.boldText}>{name}</Typography>
-                        <Typography variant='subtitle1' className={classes.cardText}>
-                            <span className={classes.boldText}>Species:</span> {species}
-                        </Typography>
-                        <Typography variant='subtitle1' className={classes.cardText}>
-                            <span className={classes.boldText}>Status:</span> {status}
-                        </Typography>
-                        <Typography variant='subtitle1' className={classes.cardText}>
-                            <span className={classes.boldText}>Location:</span> {location}
-                        </Typography>
-                        <Typography variant='subtitle1' className={classes.cardText}>
-                            <span className={classes.boldText}>Gender:</span> {gender}
-                        </Typography>
+                        <details>
+                            <summary className={classes.summary}>Details</summary>
+                                <Typography variant='subtitle1' className={classes.cardText}>
+                                    <span className={classes.boldText}>Species:</span> {species}
+                                </Typography>
+                                <Typography variant='subtitle1' className={classes.cardText}>
+                                    <span className={classes.boldText}>Status:</span> {status}
+                                </Typography>
+                                <Typography variant='subtitle1' className={classes.cardText}>
+                                    <span className={classes.boldText}>Location:</span> {location}
+                                </Typography>
+                                <Typography variant='subtitle1' className={classes.cardText}>
+                                    <span className={classes.boldText}>Gender:</span> {gender}
+                                </Typography>
+                        </details>
                     </Grid>
                 </Grid>
             </Grid>
